@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+   - name: gilead
+     description: database description
+     tables:
+          - name: pq_act
+            description: 処方情報 
+            columns:
+                - name: レセid
+                  description: レセプトごとに一意に割り付けたコード
+                  quote: true
+                  tests:
+                    - not_null
+          - name: patient_jp
+            description: 患者情報
+
